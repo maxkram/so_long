@@ -6,7 +6,7 @@
 /*   By: mkramer <mkramer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:38:47 by mkramer           #+#    #+#             */
-/*   Updated: 2023/07/19 20:53:05 by mkramer          ###   ########.fr       */
+/*   Updated: 2023/07/20 14:19:42 by mkramer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ int			map_with_errors(char *argv);
 int			broken_map_name(char *filename);
 int			broken_map(char **map);
 int			broken_map_struct(char **map, size_t array_length);
-int			not_wall(char c);
+int			check_wall(char c);
 int			broken_components(char *map);
 int			check_args(void);
 int			components_error(char *map_string);

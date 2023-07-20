@@ -6,7 +6,7 @@
 /*   By: mkramer <mkramer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:38:37 by mkramer           #+#    #+#             */
-/*   Updated: 2023/07/19 23:16:54 by mkramer          ###   ########.fr       */
+/*   Updated: 2023/07/20 14:46:39 by mkramer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void	init_tile_textures(t_data **data)
 
 	(*data)->tiles = (t_texture *)malloc(sizeof(t_texture));
 	tiles = (*data)->tiles;
-	tiles->floor = mlx_load_png("assets/tiles/floor/0.png");
-	tiles->wall = mlx_load_png("assets/tiles/wall/0.png");
+	tiles->floor = mlx_load_png("assets/tiles/floor/floor.png");
+	tiles->wall = mlx_load_png("assets/tiles/wall/wall.png");
 	tiles->exit[0] = mlx_load_png("assets/tiles/other/32.png");
 	tiles->exit[1] = mlx_load_png("assets/tiles/other/34.png");
 	tiles->exit[2] = NULL;
@@ -63,22 +63,14 @@ void	init_idle_texture(t_data **data)
 
 	(*data)->idle = (t_idle *)malloc(sizeof(t_idle));
 	idle = (*data)->idle;
-	idle->right[0] = mlx_load_png("assets/player/idle/right/0.png");
-	idle->right[1] = mlx_load_png("assets/player/idle/right/1.png");
-	idle->right[2] = mlx_load_png("assets/player/idle/right/2.png");
-	idle->right[3] = mlx_load_png("assets/player/idle/right/3.png");
-	idle->right[4] = mlx_load_png("assets/player/idle/right/4.png");
-	idle->right[5] = mlx_load_png("assets/player/idle/right/5.png");
-	idle->right[6] = mlx_load_png("assets/player/idle/right/6.png");
-	idle->right[7] = mlx_load_png("assets/player/idle/right/7.png");
-	// idle->right[0] = mlx_load_png("assets/player/1.png");
-	// idle->right[1] = mlx_load_png("assets/player/1.png");
-	// idle->right[2] = mlx_load_png("assets/player/1.png");
-	// idle->right[3] = mlx_load_png("assets/player/1.png");
-	// idle->right[4] = mlx_load_png("assets/player/1.png");
-	// idle->right[5] = mlx_load_png("assets/player/1.png");
-	// idle->right[6] = mlx_load_png("assets/player/1.png");
-	// idle->right[7] = mlx_load_png("assets/player/1.png");
+	idle->right[0] = mlx_load_png("assets/player/1.png");
+	idle->right[1] = mlx_load_png("assets/player/1.png");
+	idle->right[2] = mlx_load_png("assets/player/1.png");
+	idle->right[3] = mlx_load_png("assets/player/1.png");
+	idle->right[4] = mlx_load_png("assets/player/1.png");
+	idle->right[5] = mlx_load_png("assets/player/1.png");
+	idle->right[6] = mlx_load_png("assets/player/1.png");
+	idle->right[7] = mlx_load_png("assets/player/1.png");
 	idle->right[8] = NULL;
 	load_idle_images(data);
 	delete_idle_textures(data);
